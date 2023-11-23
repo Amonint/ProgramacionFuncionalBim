@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.div-titulo {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-titulo h1 {
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.contenedor {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* ESTILOS FORMULARIO */
+.contenedor .div-formulario {
+    width: 90vw;
+    height: 60vh;
+    margin: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor .div-formulario h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.contenedor .div-formulario form {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor .div-formulario form input,
+.contenedor .div-formulario form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contenedor .div-formulario form button {
+    background-color: #4285f4;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ESTILOS LISTADO */
+.contenedor .div-listado {
+    width: 90vw;
+    height: 80vh;
+    margin: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor .div-listado h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.contenedor .div-listado .div-empleados {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    padding: 0 5%;
+    overflow-y: auto;
+}
+
+.contenedor .div-listado .div-empleados p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    margin: 0 5px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-editar {
+    background-color: #34a853;
+}
+
+.btn-eliminar {
+    background-color: #ea4335;
+}
