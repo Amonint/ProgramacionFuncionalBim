@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Control de Flota y Logística - CRUD</title>
+    <title>CRUD LOCAL JS</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,32 +9,34 @@
 </head>
 <body>
     <div class="div-titulo">
-        <h1>Control de Flota y Logística - CRUD</h1>
+        <h1>CRUD Local JavaScript</h1>
     </div>
     
     <div class="contenedor">
 
         <div class="div-formulario">
-            <h2>Formulario Agregar Camión</h2>
-
-            <form action="#" id="formularioCamion">
-                <input type="text" id="chofer" placeholder="Chofer">
-                <input type="text" id="camionid" placeholder="ID del Camión">
-                <input type="text" id="combustible" placeholder="Combustible (galones)">
-                <input type="text" id="distanciaRecorrida" placeholder="Distancia Recorrida (km)">
-                <button type="submit" id="btnAgregarCamion">Agregar Camión</button>
+            <h2>Formulario</h2>
+    
+            <form action="#" id="formulario">
+                <input type="text" id="cliente" placeholder="Ingresa el cliente">
+                <input type="text" id="idPaquete" placeholder="Ingresa el ID del paquete">
+                <input type="text" id="destino" placeholder="Ingresa el destino">
+                <input type="text" id="origen" placeholder="Ingresa el origen">
+                <input type="text" id="estado" placeholder="Ingresa el estado">
+                <input type="text" id="camionid" placeholder="Ingresa el ID del camión">
+                <input type="text" id="fechaIngreso" placeholder="Ingresa la fecha de ingreso">
+                <button type="submit" id="btnAgregar">Agregar</button>
             </form>
         </div>
-
+    
         <div class="div-listado">
-            <h2>Listado de Camiones</h2>
-            <div class="div-camiones">
-                
+            <h2>Listado Paquetes</h2>
+            <div class="div-paquetes">
+    
             </div>
         </div>
-
+    
     </div>
-
-    <script src="./crudCamiones.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
