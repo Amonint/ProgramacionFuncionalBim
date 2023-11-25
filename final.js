@@ -5,22 +5,19 @@ const ruta = [
 ];
 const camiones = [
     { Chofer: "Pablo", camionid:1652531523, cobustibleutilizado:20,distanciaRecorrida:800, coordenadas:"66° 33 9N; 11° 04’ 13’’ E", velocidad:60, rutaID:"001", capacidad:20},
-    { Chofer: "Pablo", camionid:1652531523, cobustibleutilizado:20,distanciaRecorrida:800, coordenadas:"66° 33 9N; 11° 04’ 13’’ E", velocidad:60, rutaID:"001", capacidad: 20},
-  
-
-
+    { Chofer: "Jose", camionid:1652531524, cobustibleutilizado:20,distanciaRecorrida:800, coordenadas:"66° 33 9N; 11° 04’ 13’’ E", velocidad:60, rutaID:"001", capacidad: 20},
 ];
 const paquetes = [
-    { Cliente: "Juan", idpaquete: 2768768, destino: "Quito", origin: "Loja", estado: "En ruta", camionid: null, fechaIngreso: 56 },
-    { Cliente: "Maria", idpaquete: 3456789, destino: "Guayaquil", origin: "Cuenca", estado: "En inventario", camionid: null, fechaIngreso: 67 },
-    { Cliente: "Pedro", idpaquete: 9876543, destino: "Manta", origin: "Esmeraldas", estado: "Entregado", camionid: null, fechaIngreso: 78 },
-    { Cliente: "Ana", idpaquete: 5647382, destino: "Ambato", origin: "Ibarra", estado: "En ruta", camionid: null, fechaIngreso: 89 },
-    { Cliente: "Carlos", idpaquete: 1122334, destino: "Riobamba", origin: "Cuenca", estado: "Entregado", camionid: null, fechaIngreso: 90 },
-    { Cliente: "Luisa", idpaquete: 9988776, destino: "Machala", origin: "Loja", estado: "En inventario", camionid: null, fechaIngreso: 101 },
-    { Cliente: "Roberto", idpaquete: 2233445, destino: "Cuenca", origin: "Quito", estado: "En ruta", camionid: null, fechaIngreso: 112 },
-    { Cliente: "Elena", idpaquete: 6677889, destino: "Guayaquil", origin: "Manta", estado: "En inventario", camionid: null, fechaIngreso: 123 },
-    { Cliente: "Diego", idpaquete: 4455667, destino: "Ambato", origin: "Quito", estado: "Entregado", camionid: null, fechaIngreso: 134 },
-    { Cliente: "Gabriela", idpaquete: 1122334, destino: "Esmeraldas", origin: "Riobamba", estado: "En ruta", camionid: null, fechaIngreso: 145 },
+    { Cliente: "Juan", idpaquete: 2768768, destino: "Quito", origin: "Loja", estado: "En ruta", camionid: 1652531523, fechaIngreso: 56 },
+    { Cliente: "Maria", idpaquete: 3456789, destino: "Guayaquil", origin: "Cuenca", estado: "En inventario", camionid: 1652531523, fechaIngreso: 67 },
+    { Cliente: "Pedro", idpaquete: 9876543, destino: "Manta", origin: "Esmeraldas", estado: "Entregado", camionid: 1652531524, fechaIngreso: 78 },
+    { Cliente: "Ana", idpaquete: 5647382, destino: "Ambato", origin: "Ibarra", estado: "En ruta", camionid: 1652531523, fechaIngreso: 89 },
+    { Cliente: "Carlos", idpaquete: 1122334, destino: "Riobamba", origin: "Cuenca", estado: "Entregado", camionid: 1652531524, fechaIngreso: 90 },
+    { Cliente: "Luisa", idpaquete: 9988776, destino: "Machala", origin: "Loja", estado: "En inventario", camionid: 1652531524, fechaIngreso: 101 },
+    { Cliente: "Roberto", idpaquete: 2233445, destino: "Cuenca", origin: "Quito", estado: "En ruta", camionid: 1652531523, fechaIngreso: 112 },
+    { Cliente: "Elena", idpaquete: 6677889, destino: "Guayaquil", origin: "Manta", estado: "En inventario", camionid: 1652531523, fechaIngreso: 123 },
+    { Cliente: "Diego", idpaquete: 4455667, destino: "Ambato", origin: "Quito", estado: "Entregado", camionid: 1652531523, fechaIngreso: 134 },
+    { Cliente: "Gabriela", idpaquete: 1122334, destino: "Esmeraldas", origin: "Riobamba", estado: "En ruta", camionid: 1652531523, fechaIngreso: 145 },
   ];
   
 
@@ -28,7 +25,7 @@ const bodega  = [
     { idpaquete:6786686},
 ];
 
-/* const readline = require('readline');
+const readline = require('readline');
 
 // Crear una interfaz de lectura
 const rl = readline.createInterface({
@@ -59,7 +56,7 @@ const seguimientoPaquete = (camiones, paquetes) => {
 };
 
 // Llamar a la función con los arreglos de camiones y paquetes
-seguimientoPaquete(camiones, paquetes); */
+seguimientoPaquete(camiones, paquetes);
 /* ------------------------------------------------------------------------------------------------------- */
 
 /* 
@@ -86,7 +83,7 @@ const gestionarEntrega = (paquete, rutas, camiones) => {
 // Llamar a la función con el arreglo de paquetes, rutas y camiones
 paquetes.forEach(paquete => gestionarEntrega(paquete, ruta, camiones)); */
 
-const asignarCamiones = (camiones, paquetes) => {
+/* const asignarCamiones = (camiones, paquetes) => {
     return paquetes.reduce((acumulador, paquete) => {
       const camionDisponible = paquete.estado === "En ruta"
         ? camiones.find(camion => camion.camionid === paquete.camionid && camion.capacidad > 0)
@@ -108,7 +105,7 @@ const asignarCamiones = (camiones, paquetes) => {
   paquetesAsignados.forEach(paquete => {
     console.log(`ID Paquete: ${paquete.idpaquete}, Cliente: ${paquete.Cliente}, Estado: ${paquete.estado}, CamionID: ${paquete.camionid}`);
   });
-  
+   */
 
 /* ------------------------------------------------------------------------------------------------ */
 
@@ -140,24 +137,7 @@ resultadosCalculo.forEach(resultado => {
 /* 
 ---------------------------------------------------------------------- */
 
-/* const clasificarPaquetes = (paquetes) => {
-    return paquetes.map(paquete => ({
-      ...paquete,
-      ubicacion: paquete.estado === "En inventario" ? "Bodega" :
-                 paquete.estado === "En ruta" ? "En ruta" :
-                 paquete.estado === "Entregado" ? "Entregado" :
-                 "Desconocido"
-    }));
-  };
-  
-  // Ejemplo de uso
-  const paquetesClasificados = clasificarPaquetes(paquetes);
-  
-  // Mostrar los resultados
-  console.log("Paquetes Clasificados:");
-  paquetesClasificados.forEach(paquete => {
-    console.log(`ID Paquete: ${paquete.idpaquete}, Cliente: ${paquete.Cliente}, Estado: ${paquete.estado}, Ubicación: ${paquete.ubicacion}`);
-  }); */
+ 
   
 
   /* ------------------------------------------------------------------ */

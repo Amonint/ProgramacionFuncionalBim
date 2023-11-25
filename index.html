@@ -1,42 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <title>CRUD LOCAL JS</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguimiento de Paquete</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="div-titulo">
-        <h1>CRUD Local JavaScript</h1>
-    </div>
-    
-    <div class="contenedor">
 
-        <div class="div-formulario">
-            <h2>Formulario</h2>
-    
-            <form action="#" id="formulario">
-                <input type="text" id="cliente" placeholder="Ingresa el cliente">
-                <input type="text" id="idPaquete" placeholder="Ingresa el ID del paquete">
-                <input type="text" id="destino" placeholder="Ingresa el destino">
-                <input type="text" id="origen" placeholder="Ingresa el origen">
-                <input type="text" id="estado" placeholder="Ingresa el estado">
-                <input type="text" id="camionid" placeholder="Ingresa el ID del camión">
-                <input type="text" id="fechaIngreso" placeholder="Ingresa la fecha de ingreso">
-                <button type="submit" id="btnAgregar">Agregar</button>
-            </form>
-        </div>
-    
-        <div class="div-listado">
-            <h2>Listado Paquetes</h2>
-            <div class="div-paquetes">
-    
-            </div>
-        </div>
-    
-    </div>
-    <script src="./app.js"></script>
+  <div id="app">
+    <h1>Seguimiento de Paquete</h1>
+    <form id="paqueteForm">
+      <label for="idPaquete">Ingrese el ID del paquete:</label>
+      <input type="text" id="idPaquete" name="idPaquete" required>
+      <button type="button" onclick="buscarPaquete()">Buscar Paquete</button>
+    </form>
+    <div id="resultado"></div>
+  </div>
+
+
+  
+  <h1>Lista de Rutas Asignadas a Paquetes</h1>
+
+  <label for="idPaquete">Ingrese el ID del Paquete: </label>
+  <input type="text" id="idPaquete">
+  <button onclick="buscarRuta()">Buscar Ruta</button>
+
+  <div id="listaRutas" class="responsive-list"></div>
+
+  <h1>Resultados de Eficiencia de Combustible y Tiempo de Entrega</h1>
+
+  <div id="resultadosEficiencia"></div>
+  <h1>Clasificación de Paquetes y Agregar Nuevos Paquetes</h1>
+
+  <div id="resultadosClasificacion"></div>
+
+  <form id="agregarPaqueteForm">
+      <label for="cliente">Cliente:</label>
+      <input type="text" id="cliente" required>
+      <label for="idPaquete">ID Paquete:</label>
+      <input type="text" id="idPaquete" required>
+      <label for="destino">Destino:</label>
+      <input type="text" id="destino" required>
+      <label for="origen">Origen:</label>
+      <input type="text" id="origen" required>
+      <label for="estado">Estado:</label>
+      <select id="estado" required>
+          <option value="En inventario">En inventario</option>
+          <option value="En ruta">En ruta</option>
+          <option value="Entregado">Entregado</option>
+      </select>
+      <button type="button" onclick="agregarNuevoPaquete()">Agregar Nuevo Paquete</button>
+  </form>
+
+
+  <script src="./app.js"></script>
+
 </body>
 </html>
