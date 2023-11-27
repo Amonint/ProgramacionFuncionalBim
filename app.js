@@ -1,12 +1,41 @@
+/* navbar */
+const nav = document.querySelector("#nav");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
 
+abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+})
+
+cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})
 const ruta = [
-    { rutaID:"001" , ruta: "RUTA QUITO LOJA POR CARCELEN",destino: "Quito", origin:"Loja", distancia: 8000},
-    { rutaID:"002", ruta: "RUTA QUITO LOJA POR QUITUMBE",destino: "Guayaquil", origin:"Cuenca", distancia: 8000},
+    { rutaID: "001", ruta: "RUTA QUITO LOJA POR CARCELEN",destino: "Quito", origin:"Loja", distancia: 8000},
+    { rutaID: "002", ruta: "RUTA QUITO LOJA POR QUITUMBE",destino: "Guayaquil", origin:"Cuenca", distancia: 8000},
+    { rutaID: "003", ruta: "RUTA GUAYAQUIL CUENCA POR DURÁN", destino: "Cuenca", origin: "Guayaquil", distancia: 300},
+    { rutaID: "004", ruta: "RUTA LOJA MACHALA POR ZAMORA", destino: "Machala", origin: "Loja", distancia: 500},
+    { rutaID: "005", ruta: "RUTA QUITO AMBATO POR LATACUNGA", destino: "Ambato", origin: "Quito", distancia: 150},
+    { rutaID: "006", ruta: "RUTA ESMERALDAS IBARRA POR MOMPICHE", destino: "Ibarra", origin: "Esmeraldas", distancia: 400},
+    { rutaID: "007", ruta: "RUTA GUAYAQUIL SALINAS POR SANTA ELENA", destino: "Salinas", origin: "Guayaquil", distancia: 150},
+    { rutaID: "008", ruta: "RUTA MANTA PORTOVIEJO POR JIPIJAPA", destino: "Portoviejo", origin: "Manta", distancia: 100},
+    { rutaID: "009", ruta: "RUTA GUAYAQUIL BABAHOYO POR EL TRIUNFO", destino: "Babahoyo", origin: "Guayaquil", distancia: 80},
+    { rutaID: "010", ruta: "RUTA CUENCA AZOGUES POR GUALACEO", destino: "Azogues", origin: "Cuenca", distancia: 50},
+    { rutaID: "011", ruta: "RUTA IBARRA OTAVALO POR COTACACHI", destino: "Otavalo", origin: "Ibarra", distancia: 40},
+    { rutaID: "012", ruta: "RUTA LOJA ZAMORA POR YANZATZA", destino: "Zamora", origin: "Loja", distancia: 120},
+    { rutaID: "013", ruta: "RUTA QUITO SANTO DOMINGO POR LA CONCORDIA", destino: "Santo Domingo", origin: "Quito", distancia: 180}
 
 ];
 const camiones = [
     { Chofer: "Pablo", camionid:1652531523, cobustibleutilizado:20,distanciaRecorrida:800, coordenadas:"66° 33 9N; 11° 04’ 13’’ E", velocidad:60, rutaID:"001", capacidad:20},
     { Chofer: "Jose", camionid:1652531524, cobustibleutilizado:20,distanciaRecorrida:800, coordenadas:"66° 33 9N; 11° 04’ 13’’ E", velocidad:60, rutaID:"001", capacidad: 20},
+    { Chofer: "Carlos", camionid: 1652531525, combustibleutilizado: 25, distanciaRecorrida: 600, coordenadas: "1° 26' 14'' S; 78° 59' 48'' W", velocidad: 50, rutaID: "002", capacidad: 25 },
+    { Chofer: "María", camionid: 1652531526, combustibleutilizado: 18, distanciaRecorrida: 700, coordenadas: "2° 12' 30'' S; 79° 56' 22'' W", velocidad: 55, rutaID: "003", capacidad: 22 },
+    { Chofer: "Ana", camionid: 1652531527, combustibleutilizado: 22, distanciaRecorrida: 750, coordenadas: "3° 16' 18'' S; 80° 27' 45'' W", velocidad: 58, rutaID: "004", capacidad: 18 },
+    { Chofer: "Luis", camionid: 1652531528, combustibleutilizado: 15, distanciaRecorrida: 500, coordenadas: "0° 57' 39'' S; 79° 39' 26'' W", velocidad: 45, rutaID: "005", capacidad: 30 },
+    { Chofer: "Elena", camionid: 1652531529, combustibleutilizado: 30, distanciaRecorrida: 900, coordenadas: "2° 17' 55'' S; 78° 59' 11'' W", velocidad: 65, rutaID: "006", capacidad: 25 },
+    { Chofer: "Pedro", camionid: 1652531530, combustibleutilizado: 28, distanciaRecorrida: 850, coordenadas: "1° 47' 32'' S; 79° 32' 50'' W", velocidad: 60, rutaID: "007", capacidad: 22 },
+    { Chofer: "Laura", camionid: 1652531531, combustibleutilizado: 20, distanciaRecorrida: 700, coordenadas: "0° 14' 35'' N; 78° 27' 18'' W", velocidad: 55, rutaID: "008", capacidad: 30 },
 ];
 const paquetes = [
     { Cliente: "Juan", idpaquete: 2768768, destino: "Quito", origin: "Loja", estado: "En ruta", camionid: 1652531523, fechaIngreso: 56 },

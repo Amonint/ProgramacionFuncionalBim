@@ -5,18 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seguimiento de Paquete</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+
 </head>
 <body>
+  <header>
+    <img class="logo" src="./img/images.png" alt="Logo">
 
+    <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+    <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+        <ul class="nav-list">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Quiénes somos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Qué hacemos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
   <div id="app">
-    <h1>Seguimiento de Paquete</h1>
-    <form id="paqueteForm">
-      <label for="idPaquete">Ingrese el ID del paquete:</label>
-      <input type="text" id="idPaquete" name="idPaquete" required>
-      <button type="button" onclick="buscarPaquete()">Buscar Paquete</button>
-    </form>
-    <div id="resultado"></div>
+      <h1>Seguimiento de Paquete</h1>
+      <form id="paqueteForm">
+          <label for="idPaquete">Ingrese el ID del paquete:</label>
+          <input type="text" id="idPaquete" name="idPaquete" required class="form-control">
+          <button type="button" onclick="buscarPaquete()" class="btn btn-primary">Buscar Paquete</button>
+      </form>
+      <div id="resultado"></div>
   </div>
+</div>
 
 
   
@@ -55,6 +77,9 @@
 
 
   <script src="./app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
