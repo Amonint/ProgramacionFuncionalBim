@@ -1,10 +1,16 @@
-/* Estilos para el header */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 header {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Cambiado para justificar contenido a la derecha */
-    padding: 1rem;
-    background-color: #41968A; /* Color principal */
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #41968A;
 }
 
 .logo {
@@ -19,7 +25,7 @@ header {
 
 .nav-list li a {
     text-decoration: none;
-    color: #fff; /* Texto en color blanco */
+    color: #1c1c1c;
 }
 
 .abrir-menu,
@@ -35,7 +41,14 @@ header {
         font-size: 1.25rem;
         background-color: transparent;
         cursor: pointer;
-        color: #fff; /* Texto en color blanco */
+    }
+
+    .abrir-menu {
+        color: #1c1c1c;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
     }
 
     .nav {
@@ -43,12 +56,13 @@ header {
         visibility: hidden;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: end;
         gap: 1rem;
         position: absolute;
-        top: 60px;
+        top: 0;
         right: 0;
-        background-color: #41968A;
+        bottom: 0;
+        background-color: #1c1c1c;
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
@@ -57,17 +71,16 @@ header {
         opacity: 1;
         visibility: visible;
     }
-
+    
     .nav-list {
         flex-direction: column;
-        align-items: flex-end;
+        align-items: end;
     }
 
     .nav-list li a {
-        color: #fff;
+        color: #ecececec;
     }
 }
-
 
 /* Estilos para el contenido principal */
 .container {
