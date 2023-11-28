@@ -42,40 +42,47 @@
     </div>
   </div>
 
+  <div class="MasterListaRutas">
+    <div id="app">
+      <h1>Lista de Rutas Asignadas a Paquetes</h1>
+      <label for="idPaquete">Ingrese el ID del Paquete: </label>
+      <input type="text" id="idPaquete2" name="idPaquete2" required class="form-control">
+      <button type="button" onclick="buscarRuta()" class="btn btn-primary">Buscar Ruta</button>
+      <div id="listaRutas" class="responsive-list"></div>
+    </div>
+  </div>
+
+  <div class="MasterEficienciaCombustible">
+    <h1>Resultados de Eficiencia de Combustible y Tiempo de Entrega</h1>
+    <label for="idPaquete">Ingrese el ID del Camión: </label>
+      <input type="text" id="idCamion" name="idCamion" required class="form-control">
+      <button type="button" onclick="BuscarEficienciaCombustible()" class="btn btn-primary">Buscar Camion</button>
+    <div id="resultadosEficiencia"></div>
+  </div>
+
+  <div class="MasterClasificacionPaquetes">
+    <h1>Clasificación de Paquetes y Agregar Nuevos Paquetes</h1>
+    <div id="resultadosClasificacion"></div>
+    <form id="agregarPaqueteForm">
+      <label for="cliente">Cliente:</label>
+      <input type="text" id="cliente" required>
+      <label for="idPaquete">ID Paquete:</label>
+      <input type="text" id="idPaquete" required>
+      <label for="destino">Destino:</label>
+      <input type="text" id="destino" required>
+      <label for="origen">Origen:</label>
+      <input type="text" id="origen" required>
+      <label for="estado">Estado:</label>
+      <select id="estado" required>
+        <option value="En inventario">En inventario</option>
+        <option value="En ruta">En ruta</option>
+        <option value="Entregado">Entregado</option>
+      </select>
+      <button type="button" onclick="agregarNuevoPaquete()">Agregar Nuevo Paquete</button>
+    </form>
+  </div>
 
 
-  <h1>Lista de Rutas Asignadas a Paquetes</h1>
-
-  <label for="idPaquete">Ingrese el ID del Paquete: </label>
-  <input type="text" id="idPaquete">
-  <button onclick="buscarRuta()">Buscar Ruta</button>
-
-  <div id="listaRutas" class="responsive-list"></div>
-
-  <h1>Resultados de Eficiencia de Combustible y Tiempo de Entrega</h1>
-
-  <div id="resultadosEficiencia"></div>
-  <h1>Clasificación de Paquetes y Agregar Nuevos Paquetes</h1>
-
-  <div id="resultadosClasificacion"></div>
-
-  <form id="agregarPaqueteForm">
-    <label for="cliente">Cliente:</label>
-    <input type="text" id="cliente" required>
-    <label for="idPaquete">ID Paquete:</label>
-    <input type="text" id="idPaquete" required>
-    <label for="destino">Destino:</label>
-    <input type="text" id="destino" required>
-    <label for="origen">Origen:</label>
-    <input type="text" id="origen" required>
-    <label for="estado">Estado:</label>
-    <select id="estado" required>
-      <option value="En inventario">En inventario</option>
-      <option value="En ruta">En ruta</option>
-      <option value="Entregado">Entregado</option>
-    </select>
-    <button type="button" onclick="agregarNuevoPaquete()">Agregar Nuevo Paquete</button>
-  </form>
 
 
   <script src="./app.js"></script>

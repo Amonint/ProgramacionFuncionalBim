@@ -84,7 +84,7 @@ header {
 
 /* Estilos para el contenido principal */
 .container {
-    margin: 20px;
+    background-color: #41968A;
 }
 
 #app {
@@ -171,4 +171,25 @@ select {
 
 #agregarPaqueteForm button:hover {
     background-color: #3F635E; /* Color de resaltado */
+}
+.MasterListaRutas{
+    background-color: #41968A; 
+}
+.MasterListaRutas h1 {
+    text-align: center; /* Elimina el margen predeterminado del h1 */
+}
+.MasterClasificacionPaquetes{
+    background-color: #41968A; 
+
+}
+.MasterEficienciaCombustible{
+    background-color: #41968A; 
+    text-align: center;
+}
+.MasterClasificacionPaquetes h1 {
+    text-align: center; /* Elimina el margen predeterminado del h1 */
+}
+
+.responsive-list {
+    text-align: left; /* Alinea el texto a la izquierda */
 }

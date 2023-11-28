@@ -97,15 +97,15 @@ function buscarPaquete() {
     function listarPaquetes(rutas, camiones, paquetes) {
         const listaRutas = document.getElementById('listaRutas');
         listaRutas.innerHTML = '';
-
-        paquetes.forEach(paquete => {
+    
+        paquetes.map(paquete => {
             const rutaElegida = rutas.find(
                 ruta => ruta.destino === paquete.destino && ruta.origin === paquete.origin
             );
-
+    
             const divItem = document.createElement('div');
             divItem.classList.add('responsive-item');
-
+    
             divItem.innerHTML = `<strong>Cliente:</strong> ${paquete.Cliente}, 
                                 <strong>ID Paquete:</strong> ${paquete.idpaquete}, 
                                 <strong>Destino:</strong> ${paquete.destino}, 
@@ -114,13 +114,14 @@ function buscarPaquete() {
                                 <strong>ID Camión:</strong> ${paquete.camionid}, 
                                 <strong>Fecha Ingreso:</strong> ${paquete.fechaIngreso} 
                                 <br><strong>Ruta asignada:</strong> ${rutaElegida ? rutaElegida.ruta : 'No disponible'}`;
-
+    
             listaRutas.appendChild(divItem);
         });
     }
+    
 
     function buscarRuta() {
-        const idPaquete = document.getElementById('idPaquete').value;
+        const idPaquete = document.getElementById('idPaquete2').value;
         const paquete = paquetes.find(p => p.idpaquete == idPaquete);
 
         paquete ? gestionarEntrega(paquete, ruta, camiones) : console.log(`No se encontró un paquete con el ID ${idPaquete}`);
@@ -159,6 +160,21 @@ function buscarPaquete() {
                             <strong>Tiempo de Entrega:</strong> ${resultado.tiempoEntrega.toFixed(2)} horas`;
         resultadosEficienciaDiv.appendChild(divItem);
     });
+
+    function BuscarEficienciaCombustible() {
+        const camionIDBuscado = document.getElementById('idCamion').value;
+        const resultadoCamion = resultadosCalculo.find(res => res.camionid === camionIDBuscado);
+    
+        resultadoCamion
+            ? console.log(`Resultados para el Camión ID ${camionIDBuscado}: Eficiencia de Combustible: ${resultadoCamion.eficienciaCombustible.toFixed(2)} km/gal, Tiempo de Entrega: ${resultadoCamion.tiempoEntrega.toFixed(2)} horas`)
+            : console.log(`No se encontraron resultados para el Camión ID ${camionIDBuscado}`);
+    }
+    
+
+    // Listar todos los paquetes al cargar la página
+    listarPaquetes(ruta, camiones, paquetes);
+
+    /* -------------------------------------------------------------------------------------------- */
 
     function clasificarPaquetes(paquetes) {
         return paquetes.map(paquete => ({
