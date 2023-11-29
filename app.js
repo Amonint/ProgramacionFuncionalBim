@@ -248,5 +248,4 @@ function agregarNuevoPaquete() {
         console.error(error.message);
         // Puedes manejar el error de otra manera si es necesario
     }
-}
- */
+} */
